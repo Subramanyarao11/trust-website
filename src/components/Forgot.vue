@@ -3,7 +3,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <img
         class="mx-auto h-32 w-auto"
-        src="./assets/trust_logo.png"
+        src="./../assets/trust_logo.png"
         alt="Ninna olumeinda trust logo"
       />
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">

@@ -18,7 +18,7 @@
             <span class="text-blue-600">Olumeinda</span>
             <br />
           </h2>
-          <a
+          <span
             class="
               inline-block
               px-7
@@ -40,17 +40,17 @@
               mb-2
               md:mr-2
             "
-            href="#!"
             role="button"
+            @click="redirect"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
-            >Login</a
+            >Login</span
           >
         </div>
 
         <div class="mb-12 lg:mb-0">
           <img
-            src="./assets/trust_logo.png"
+            src="./../assets/trust_logo.png"
             class="w-full rounded-lg sshadow-lg"
             alt="Logo of Ninna Olumeinda Trust"
           />
@@ -77,7 +77,15 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router'
 export default {
   name: "Home",
+  setup() {
+    const router = useRouter();
+    const redirect = () => {
+      router.push("/login");
+    }
+    return { redirect }
+  }
 };
 </script>

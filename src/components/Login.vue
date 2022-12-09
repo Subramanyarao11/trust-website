@@ -3,7 +3,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <img
         class="mx-auto h-32 w-auto"
-        src="./assets/trust_logo.png"
+        src="./../assets/trust_logo.png"
         alt="Ninna olumeinda trust logo"
       />
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -98,12 +98,12 @@
             </div>
 
             <div class="text-sm">
-              <a
-                href="#"
-                class="font-medium text-indigo-600 hover:text-indigo-500"
+              <span
+                @click="redirect"
+                class="font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer"
               >
                 Forgot your password?
-              </a>
+              </span>
             </div>
           </div>
 
@@ -141,7 +141,15 @@
 
 
 <script>
+import { useRouter } from 'vue-router'; 
 export default {
   name: "Login",
+  setup() {
+    const router = useRouter();
+    const redirect = () => {
+      router.push("/forgot");
+    }
+    return { redirect }
+  }
 };
 </script>
